@@ -1,0 +1,57 @@
+{
+  "name": "ReactBlog-Task2",
+  "version": "1.0.0",
+  "description": "Server Side Rendering with ReactJS, React Router v4, Redux",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -d",
+    "start": "npm run dev && babel-node ./src/server",
+    "lint": "eslint '*'"
+  },
+  "keywords": [
+    "ssr",
+    "reactjs",
+    "redux",
+    "react-router"
+  ],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "mongoose": "^5.0.3",
+    "nodemon": "^1.12.1",
+    "nodemon": "^1.14.11",
+    "react-hot-loader": "^4.0.0",
+    "redux-mock-store": "^1.5.1",
+    "webpack": "^3.11.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "isomorphic-fetch": "^2.2.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router-config": "^1.0.0-beta.4",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  }
+}
