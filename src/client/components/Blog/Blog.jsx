@@ -13,7 +13,7 @@ const Blog = ({ items }) => (
 
 Blog.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,

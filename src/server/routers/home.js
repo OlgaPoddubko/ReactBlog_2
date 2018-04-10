@@ -11,7 +11,7 @@ import routes from '../../client/routes';
 import configureStore from '../../client/configureStore';
 import App from '../../client/app';
 
-function renderFullPage(html) {
+function renderFullPage(html, preloadedState) {
 	return `
 		<!doctype html>
 		<html>
@@ -63,7 +63,7 @@ router.get('/*', function(req, res, next) {
       }
 
       const preloadedState = store.getState();
-			console.log(perloadedState);//
+			console.log(preloadedState);//
 
       return res.send(renderFullPage(html, preloadedState));
     });
