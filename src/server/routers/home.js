@@ -58,12 +58,10 @@ router.get('/*', function(req, res, next) {
       const html = renderToString(app);
 
       if (context.url) {
-				// что здесь происходит?
         return res.redirect(context.url);
       }
 
       const preloadedState = store.getState();
-			console.log(preloadedState);//
 
       return res.send(renderFullPage(html, preloadedState));
     });

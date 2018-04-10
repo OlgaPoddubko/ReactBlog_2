@@ -9,7 +9,8 @@ class ArticlePage extends Component {
   static propTypes = {
     fetchArticleById: PropTypes.func.isRequired,
     article: PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      _id: PropTypes.string.isRequired,//
+      id: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired

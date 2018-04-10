@@ -20,19 +20,17 @@ export const updateCurrentArticle = article => ({
 
 export const fetchBlog = () => (dispatch) => {
   dispatch(loadBlog());
-
-//  return fetch('http://jsonplaceholder.typicode.com/users')//
-return fetch('http://localhost:8000/blog')
+  return fetch('http://localhost:8000/blog')
     .then(res => res.json())
     .then(blog => dispatch(updateBlog(blog)));
 };
 
 export const fetchArticleById = articleId => (dispatch) => {
   dispatch(loadBlog());
-  //return fetch(`http://jsonplaceholder.typicode.com/users/${articleId}`)//
+  //dispatch(updateCurrentArticle(articleId));
   return fetch(`http://localhost:8000/blog/${articleId}`)
     .then(res => res.json())
-    .then(blog => dispatch(updateCurrentArticle(blog)));// ??
+    .then(article => dispatch(updateCurrentArticle(article._id))); //?
 };
 
 // Initial state

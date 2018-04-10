@@ -10,7 +10,7 @@ class HomePage extends Component {
     return (
       <div>
         <h2>You are welcome to HomePage!</h2>
-        <p>To view blog clock Blog</p>
+        <p>To view blog click Blog</p>
         <style jsx>{`
           h2, p{
             text-align: center;
