@@ -63,3 +63,75 @@ export default (state = INITIAL_STATE, action = {}) => {
       return state;
   }
 };
+
+// login and logout
+export const logIn = login => ({
+  type: 'LOG_IN',
+  login,
+});
+
+export const logOut = logout => ({
+  type: 'LOG_OUT',
+  logout,
+});
+
+export const handleLogin = (formData, history) => dispatch => {
+  fetch(`http://localhost:8000/login`, {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    credentials: 'same-origin',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      if (data.error) {
+        return console.error(data.error);
+      }
+      dispatch(logIn(true));
+      return history.push('/');
+    })
+    .catch(error => console.error(error));
+};
+
+export const handleLogout = history => dispatch => {
+  fetch(`http://localhost:8000/logout`, { method: 'GET', credentials: 'same-origin' }).then(
+    () => {
+      dispatch(logOut(true));
+      return history.push('/');
+    },
+  );
+};
+
+//registration
+export const signUp = signup => ({
+  type: 'SIGN_UP',
+  signup,
+});
+
+export const handleSignup = (formData, history) => dispatch => {
+  fetch(`http://localhost:8000/signup`, {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    credentials: 'same-origin',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      if (data.error) {
+        return console.error(data.error);
+      }
+      dispatch(signUp(true));
+      return history.push('/');
+    })
+    .catch(error => console.error(error));
+};

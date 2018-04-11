@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import {Route, Link, Switch, Redirect} from 'react-router-dom';
 import { Link, Switch } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import 'isomorphic-fetch';
@@ -15,7 +14,8 @@ const App = ({name}) => (
     <ul className="nav">
       <li><Link to="/">Home</Link></li>
       <li><Link to="/blog">Blog</Link></li>
-      <li><Link to="/blog/add">Add Article</Link></li>
+      <li><Link to="/login">Login</Link></li>
+      <li><Link to="/signup">Sign up</Link></li>
     </ul>
 
     <Switch>

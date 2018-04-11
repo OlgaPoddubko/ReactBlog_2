@@ -1,5 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('./passport');
 
 const port = 8000;
 const server = express();
@@ -10,6 +13,17 @@ const blog = require('./routers/blog');
 server.use(express.static('public'));
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
+server.use(cookieParser());
+server.use(
+  session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: false,
+  }),
+);
+
+server.use(passport.initialize());
+server.use(passport.session());
 
 server.listen(port, () => {
 	console.info(`Express listening on port ${port}`);

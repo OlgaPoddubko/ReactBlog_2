@@ -34,9 +34,17 @@ exports[`render App should render App 1`] = `
     <li>
       <Link
         replace={false}
-        to="/blog/add"
+        to="/login"
       >
-        Add Article
+        Login
+      </Link>
+    </li>
+    <li>
+      <Link
+        replace={false}
+        to="/signup"
+      >
+        Sign up
       </Link>
     </li>
   </ul>
@@ -57,6 +65,16 @@ exports[`render App should render App 1`] = `
       <Route
         key="2"
         path="/blog/:articleId"
+        render={[Function]}
+      />
+      <Route
+        key="3"
+        path="/login"
+        render={[Function]}
+      />
+      <Route
+        key="4"
+        path="/signup"
         render={[Function]}
       />
     </Switch>

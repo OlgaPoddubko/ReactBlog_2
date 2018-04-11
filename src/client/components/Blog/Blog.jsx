@@ -6,8 +6,14 @@ import Article from './Article';
 const Blog = ({ items }) => (
   <div className="blog">
     {items.map(item => (
-      <Article item={item} key={item.id} />
+      <Article item={item} key={item.id} className="article"/>
     ))}
+    <style jsx>{`
+      .article{
+        margin: 15px 0;
+      }
+    `}
+      </style>
   </div>
 );
 

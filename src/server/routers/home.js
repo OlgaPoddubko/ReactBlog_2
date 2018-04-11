@@ -30,6 +30,12 @@ function renderFullPage(html, preloadedState) {
 	`;
 }
 
+// Auth system
+const controllers = require('../passport/controllers');
+router.post('/login', controllers.login);
+router.get('/logout', controllers.logout);
+router.post('/signup', controllers.register);
+
 router.get('/*', function(req, res, next) {
   const store = configureStore();
 
