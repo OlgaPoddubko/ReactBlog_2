@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render App should render App 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="hello"
+  >
+    Hi 
+    <b>
+      !
+    </b>
+  </div>
+  <ul
+    className="nav"
+  >
+    <li>
+      <Link
+        replace={false}
+        to="/"
+      >
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link
+        replace={false}
+        to="/blog"
+      >
+        Blog
+      </Link>
+    </li>
+    <li>
+      <Link
+        replace={false}
+        to="/blog/add"
+      >
+        Add Article
+      </Link>
+    </li>
+  </ul>
+  <Switch>
+    <Switch>
+      <Route
+        exact={true}
+        key="0"
+        path="/"
+        render={[Function]}
+      />
+      <Route
+        exact={true}
+        key="1"
+        path="/blog"
+        render={[Function]}
+      />
+      <Route
+        key="2"
+        path="/blog/:articleId"
+        render={[Function]}
+      />
+    </Switch>
+  </Switch>
+  <style
+    jsx={true}
+  >
+    
+    *{
+      padding: 0;
+      margin: 0;
+      font-family: Arial;
+      color: #474747;
+    }
+    .container{
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hello{
+      margin-top: 20px;
+    }
+
+    .nav{
+      list-style-type: none;
+      text-align: right;
+      padding: 20px 0;
+    }
+    .nav li{
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .nav a{
+      color: #49c757;
+      text-decoration-color: #49c757;
+      text-transform: uppercase;
+    }
+    .nav a:hover{
+      color:  #42b34e;
+      text-decoration-color: #42b34e;
+    }
+  
+  </style>
+</div>
+`;

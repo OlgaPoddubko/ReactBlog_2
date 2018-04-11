@@ -6,7 +6,14 @@
   "scripts": {
     "dev": "webpack -d",
     "start": "npm run dev && nodemon --exec babel-node ./src/server",
-    "lint": "eslint '*'"
+    "lint": "eslint '*'",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "setupFiles": ["./test/jestsetup.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "keywords": [
     "ssr",
@@ -24,11 +31,15 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
+    "jest": "^22.4.2",
     "mongoose": "^5.0.3",
     "nodemon": "^1.12.1",
     "nodemon": "^1.14.11",

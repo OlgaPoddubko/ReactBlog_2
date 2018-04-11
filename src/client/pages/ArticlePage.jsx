@@ -17,8 +17,6 @@ class ArticlePage extends Component {
     }),
     match: PropTypes.shape({
       params: PropTypes.shape({
-
-      //    _id: PropTypes.string.isRequired,//
         articleId: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
