@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Article = ({ item }) => (
   <div className="article" key={item.id}>
-    <Link to={`/blog/${item._id}`}>{item.title}</Link> {/*нужен не item.id, а item._id*/}
+    <Link to={`/blog/${item._id}`}>{item.title}</Link>
     <p>{item.text}</p>
     <h6>{item.author}</h6>
   </div>

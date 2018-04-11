@@ -27,10 +27,9 @@ export const fetchBlog = () => (dispatch) => {
 
 export const fetchArticleById = articleId => (dispatch) => {
   dispatch(loadBlog());
-  //dispatch(updateCurrentArticle(articleId));
   return fetch(`http://localhost:8000/blog/${articleId}`)
     .then(res => res.json())
-    .then(article => dispatch(updateCurrentArticle(article._id))); //?
+    .then(article => dispatch(updateCurrentArticle(article)));
 };
 
 // Initial state

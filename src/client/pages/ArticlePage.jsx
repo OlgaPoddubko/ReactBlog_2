@@ -9,7 +9,7 @@ class ArticlePage extends Component {
   static propTypes = {
     fetchArticleById: PropTypes.func.isRequired,
     article: PropTypes.shape({
-      _id: PropTypes.string.isRequired,//
+      _id: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
@@ -17,6 +17,8 @@ class ArticlePage extends Component {
     }),
     match: PropTypes.shape({
       params: PropTypes.shape({
+
+      //    _id: PropTypes.string.isRequired,//
         articleId: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
